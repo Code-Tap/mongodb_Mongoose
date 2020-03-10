@@ -53,6 +53,7 @@ var arr = [
 
 const sheetDataPromise = entry => {
     MyModel.create({ full_path: entry }).
+    //Mute Promise exceptions.. I really need to learn how to deal with these
     catch(() => {})
     return Promise.resolve('ok')
 }
